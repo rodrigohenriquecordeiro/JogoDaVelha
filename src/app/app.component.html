@@ -4,8 +4,10 @@
   </div>
 
   <div class="container-jogo">
-    @for (item of [1,2,3,4,5,6,7,8,9]; track $index) {
-      <div class="quadrado"></div>
+    @for (valor of tabuleiro; track $index) {
+    <div class="quadrado" (click)="aoClicar($index)">
+      {{ valor }}
+    </div>
     }
   </div>
 </div>
